@@ -47,7 +47,7 @@ public class MyAppWidgetActivity extends AppWidgetProvider {
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
 
-        Log.w("miika", "onUpdate");
+        Log.w("miika", "xonUpdate");
 
         final int count = appWidgetIds.length;
 
@@ -71,7 +71,7 @@ public class MyAppWidgetActivity extends AppWidgetProvider {
 
     @Override
     public void onEnabled(Context context) {
-        Log.w("miika", "onEnabled");
+        Log.w("miika", "xonEnabled");
         // Enter relevant functionality for when the first widget is created
 
         socket.on(Socket.EVENT_CONNECT, new Emitter.Listener() {
@@ -86,7 +86,7 @@ public class MyAppWidgetActivity extends AppWidgetProvider {
 
             @Override
             public void call(Object... args) {
-                Log.w("miika", "on chat message!!");
+                Log.w("miika", "xon chat message!!");
             }
 
         }).on(Socket.EVENT_DISCONNECT, new Emitter.Listener() {
@@ -100,7 +100,7 @@ public class MyAppWidgetActivity extends AppWidgetProvider {
 
     @Override
     public void onDisabled(Context context) {
-        Log.w("miika", "onDisabled");
+        Log.w("miika", "xonDisabled");
         socket.close();
         // Enter relevant functionality for when the last widget is disabled
     }
